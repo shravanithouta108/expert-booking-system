@@ -1,0 +1,106 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',system-ui,sans-serif}
+.screen{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between}
+.logo{color:#4f46e5;font-weight:700;font-size:15px}
+.live-dot{display:flex;align-items:center;gap:5px;background:#dcfce7;color:#166534;font-size:11px;font-weight:500;padding:3px 8px;border-radius:20px}
+.dot{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.body{padding:16px 24px}
+.back{color:#4f46e5;font-size:11px;margin-bottom:12px;display:flex;align-items:center;gap:4px}
+.profile-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px;margin-bottom:12px}
+.profile-top{display:flex;gap:14px}
+.avatar{width:64px;height:64px;border-radius:14px;background:#4f46e5;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;flex-shrink:0}
+.profile-info{flex:1}
+.profile-name{font-size:17px;font-weight:700;color:#0f172a;margin-bottom:3px}
+.profile-meta{font-size:11px;color:#64748b;margin-bottom:8px}
+.profile-bio{font-size:11px;color:#475569;line-height:1.6;margin-bottom:10px}
+.skills{display:flex;gap:5px;flex-wrap:wrap}
+.skill{background:#eef2ff;color:#4f46e5;font-size:10px;font-weight:500;padding:3px 8px;border-radius:20px}
+.profile-right{text-align:right;flex-shrink:0}
+.rating-big{font-size:18px;font-weight:700;color:#0f172a}
+.reviews{font-size:10px;color:#94a3b8;margin-bottom:6px}
+.price{font-size:17px;font-weight:700;color:#4f46e5}
+.price span{font-size:11px;font-weight:400;color:#94a3b8}
+.slots-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px}
+.slots-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.slots-title{font-size:14px;font-weight:600;color:#0f172a}
+.realtime-badge{display:flex;align-items:center;gap:5px;background:#dcfce7;color:#166534;font-size:10px;font-weight:500;padding:3px 8px;border-radius:20px}
+.date-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.date-tab{padding:5px 10px;border-radius:8px;border:1px solid #e2e8f0;font-size:10px;font-weight:500;color:#64748b;background:#fff}
+.date-tab.active{background:#4f46e5;color:#fff;border-color:#4f46e5}
+.time-grid{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.slot{padding:7px 10px;border-radius:10px;font-size:11px;font-weight:500;border:1px solid #e2e8f0;background:#fff;color:#334155;text-align:center;min-width:72px}
+.slot.booked{background:#f1f5f9;color:#94a3b8;text-decoration:line-through;cursor:not-allowed}
+.slot small{display:block;font-size:9px;color:#94a3b8;text-decoration:none;margin-top:1px}
+.slot.selected{background:#4f46e5;color:#fff;border-color:#4f46e5;transform:scale(1.05)}
+.slot.available{border-color:#e2e8f0}
+.cta{border-top:1px solid #f1f5f9;padding-top:12px;display:flex;align-items:center;justify-content:space-between}
+.selected-info{font-size:11px;color:#64748b}
+.selected-info strong{color:#4f46e5}
+.btn{background:#4f46e5;color:#fff;border:none;border-radius:9px;padding:9px 18px;font-size:11px;font-weight:600}
+.star{color:#f59e0b}
+</style>
+<div class="screen">
+  <div class="nav">
+    <div class="logo">🎯 ExpertConnect</div>
+    <div style="display:flex;align-items:center;gap:16px">
+      <span style="font-size:12px;color:#64748b">Experts</span>
+      <span style="font-size:12px;color:#64748b">My Bookings</span>
+      <div class="live-dot"><span class="dot"></span>Live</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="back">← Back to Experts</div>
+    <div class="profile-card">
+      <div class="profile-top">
+        <div class="avatar">PS</div>
+        <div class="profile-info">
+          <div class="profile-name">Dr. Priya Sharma</div>
+          <div class="profile-meta">💻 Technology &nbsp;·&nbsp; 12 years experience</div>
+          <div class="profile-bio">Full-stack architect with a passion for scalable cloud systems. Former engineering lead at Google and Flipkart. Specialises in microservices, Kubernetes, and distributed databases.</div>
+          <div class="skills">
+            <span class="skill">React</span><span class="skill">Node.js</span><span class="skill">Kubernetes</span><span class="skill">AWS</span><span class="skill">System Design</span>
+          </div>
+        </div>
+        <div class="profile-right">
+          <div style="display:flex;align-items:center;gap:3px;justify-content:flex-end;margin-bottom:2px">
+            <span class="star">★</span>
+            <span class="rating-big">4.9</span>
+          </div>
+          <div class="reviews">(234 reviews)</div>
+          <div class="price">₹150<span>/hr</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="slots-card">
+      <div class="slots-header">
+        <div class="slots-title">Available Time Slots</div>
+        <div class="realtime-badge"><span class="dot" style="background:#22c55e;width:6px;height:6px;border-radius:50%;display:inline-block"></span>Updates in real-time</div>
+      </div>
+      <div class="date-tabs">
+        <div class="date-tab active">Mon, 12 May</div>
+        <div class="date-tab">Tue, 13 May</div>
+        <div class="date-tab">Wed, 14 May</div>
+        <div class="date-tab">Thu, 15 May</div>
+        <div class="date-tab">Fri, 16 May</div>
+        <div class="date-tab">Mon, 19 May</div>
+      </div>
+      <div class="time-grid">
+        <div class="slot booked">09:00 AM<small>Booked</small></div>
+        <div class="slot booked">10:00 AM<small>Booked</small></div>
+        <div class="slot selected">11:00 AM</div>
+        <div class="slot available">12:00 PM</div>
+        <div class="slot available">01:00 PM</div>
+        <div class="slot booked">02:00 PM<small>Booked</small></div>
+        <div class="slot available">03:00 PM</div>
+        <div class="slot available">04:00 PM</div>
+      </div>
+      <div class="cta">
+        <div class="selected-info">Selected: <strong>Mon, 12 May 2026</strong> at <strong>11:00 AM</strong></div>
+        <button class="btn">Book This Slot →</button>
+      </div>
+    </div>
+  </div>
+</div>

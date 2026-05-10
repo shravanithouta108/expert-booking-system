@@ -1,0 +1,171 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',system-ui,sans-serif}
+.screen{background:#f8fafc;min-height:600px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.nav{background:#fff;border-bottom:1px solid #e2e8f0;padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between}
+.logo{color:#4f46e5;font-weight:700;font-size:15px;display:flex;align-items:center;gap:6px}
+.nav-links{display:flex;align-items:center;gap:20px}
+.nav-link{font-size:12px;color:#64748b;font-weight:500}
+.nav-link.active{color:#4f46e5}
+.live-dot{display:flex;align-items:center;gap:5px;background:#dcfce7;color:#166534;font-size:11px;font-weight:500;padding:3px 8px;border-radius:20px}
+.dot{width:6px;height:6px;border-radius:50%;background:#22c55e}
+.body{padding:20px 24px}
+.hero{text-align:center;margin-bottom:20px}
+.hero h1{font-size:22px;font-weight:700;color:#0f172a;margin-bottom:4px}
+.hero h1 span{color:#4f46e5}
+.hero p{font-size:12px;color:#64748b}
+.search-row{display:flex;gap:10px;margin-bottom:14px;align-items:center}
+.search-box{flex:1;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:8px 12px}
+.search-box input{border:none;outline:none;font-size:12px;color:#64748b;background:transparent;width:100%}
+.cats{display:flex;gap:6px;flex-wrap:wrap}
+.cat{padding:5px 10px;border-radius:8px;font-size:11px;font-weight:500;border:1px solid #e2e8f0;background:#fff;color:#64748b;cursor:pointer}
+.cat.active{background:#4f46e5;color:#fff;border-color:#4f46e5}
+.count{font-size:11px;color:#94a3b8;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px}
+.card-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
+.avatar{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px;flex-shrink:0}
+.card-name{font-size:13px;font-weight:600;color:#0f172a;margin-bottom:2px}
+.card-cat{font-size:11px;color:#64748b}
+.stars{display:flex;align-items:center;gap:3px;margin-left:auto;flex-shrink:0}
+.star{color:#f59e0b;font-size:12px}
+.rating{font-size:11px;font-weight:600;color:#334155}
+.reviews{font-size:10px;color:#94a3b8}
+.bio{font-size:11px;color:#64748b;line-height:1.5;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:10px}
+.tag{background:#eef2ff;color:#4f46e5;font-size:10px;font-weight:500;padding:2px 7px;border-radius:20px}
+.tag.gray{background:#f1f5f9;color:#64748b}
+.card-foot{border-top:1px solid #f1f5f9;padding-top:10px;display:flex;align-items:center;justify-content:space-between}
+.stat p:first-child{font-size:9px;color:#94a3b8;margin-bottom:1px}
+.stat p:last-child{font-size:11px;font-weight:600;color:#334155}
+.rate{color:#4f46e5;font-weight:700;font-size:11px}
+.btn{background:#4f46e5;color:#fff;border:none;border-radius:8px;padding:5px 10px;font-size:10px;font-weight:600;cursor:pointer}
+.pagination{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:16px}
+.page-btn{width:28px;height:28px;border-radius:8px;border:1px solid #e2e8f0;font-size:11px;font-weight:500;display:flex;align-items:center;justify-content:center;color:#64748b;cursor:pointer}
+.page-btn.active{background:#4f46e5;color:#fff;border-color:#4f46e5}
+.page-btn.arrow{width:auto;padding:0 10px;font-size:10px}
+</style>
+<div class="screen">
+  <div class="nav">
+    <div class="logo">🎯 ExpertConnect</div>
+    <div class="nav-links">
+      <span class="nav-link active">Experts</span>
+      <span class="nav-link">My Bookings</span>
+      <span class="live-dot"><span class="dot"></span>Live</span>
+    </div>
+  </div>
+  <div class="body">
+    <div class="hero">
+      <h1>Find Your <span>Expert</span></h1>
+      <p>Book 1-on-1 sessions with vetted professionals across Technology, Finance, Health, and more.</p>
+    </div>
+    <div class="search-row">
+      <div class="search-box">
+        <span style="font-size:13px;color:#94a3b8">🔍</span>
+        <input value="Search by name or skill..." readonly />
+      </div>
+    </div>
+    <div class="cats" style="margin-bottom:14px">
+      <span class="cat active">All</span>
+      <span class="cat">Technology</span>
+      <span class="cat">Finance</span>
+      <span class="cat">Health</span>
+      <span class="cat">Legal</span>
+      <span class="cat">Marketing</span>
+      <span class="cat">Design</span>
+    </div>
+    <p class="count">Showing 6 of 10 experts</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top">
+          <div class="avatar" style="background:#4f46e5">PS</div>
+          <div><div class="card-name">Dr. Priya Sharma</div><div class="card-cat">💻 Technology</div></div>
+          <div class="stars"><span class="star">★</span><span class="rating">4.9</span><span class="reviews">(234)</span></div>
+        </div>
+        <div class="bio">Full-stack architect with a passion for scalable cloud systems. Former engineering lead at Google and Flipkart.</div>
+        <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">AWS</span><span class="tag gray">+2</span></div>
+        <div class="card-foot">
+          <div class="stat"><p>Experience</p><p>12 yrs</p></div>
+          <div class="stat"><p>Rate</p><p class="rate">₹150/hr</p></div>
+          <button class="btn">View Profile</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <div class="avatar" style="background:#8b5cf6">AM</div>
+          <div><div class="card-name">Arjun Mehta</div><div class="card-cat">💰 Finance</div></div>
+          <div class="stars"><span class="star">★</span><span class="rating">4.8</span><span class="reviews">(189)</span></div>
+        </div>
+        <div class="bio">CFA-certified investment analyst with a decade at Goldman Sachs. Helps startups navigate personal finance.</div>
+        <div class="tags"><span class="tag">Portfolio</span><span class="tag">Tax Planning</span><span class="tag gray">+2</span></div>
+        <div class="card-foot">
+          <div class="stat"><p>Experience</p><p>10 yrs</p></div>
+          <div class="stat"><p>Rate</p><p class="rate">₹200/hr</p></div>
+          <button class="btn">View Profile</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <div class="avatar" style="background:#0d9488">KR</div>
+          <div><div class="card-name">Dr. Kavya Reddy</div><div class="card-cat">🩺 Health</div></div>
+          <div class="stars"><span class="star">★</span><span class="rating">4.7</span><span class="reviews">(312)</span></div>
+        </div>
+        <div class="bio">Board-certified physician specialising in preventive care and wellness. Translates complex medical jargon.</div>
+        <div class="tags"><span class="tag">Preventive Care</span><span class="tag">Nutrition</span><span class="tag gray">+2</span></div>
+        <div class="card-foot">
+          <div class="stat"><p>Experience</p><p>8 yrs</p></div>
+          <div class="stat"><p>Rate</p><p class="rate">₹120/hr</p></div>
+          <button class="btn">View Profile</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <div class="avatar" style="background:#f97316">RV</div>
+          <div><div class="card-name">Rohan Verma</div><div class="card-cat">⚖️ Legal</div></div>
+          <div class="stars"><span class="star">★</span><span class="rating">4.9</span><span class="reviews">(145)</span></div>
+        </div>
+        <div class="bio">Senior partner with a decade in startup law, IP protection, and commercial contracts. Trusted by 50+ startups.</div>
+        <div class="tags"><span class="tag">Corporate Law</span><span class="tag">IP Rights</span><span class="tag gray">+2</span></div>
+        <div class="card-foot">
+          <div class="stat"><p>Experience</p><p>14 yrs</p></div>
+          <div class="stat"><p>Rate</p><p class="rate">₹250/hr</p></div>
+          <button class="btn">View Profile</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <div class="avatar" style="background:#ec4899">SI</div>
+          <div><div class="card-name">Sneha Iyer</div><div class="card-cat">📈 Marketing</div></div>
+          <div class="stars"><span class="star">★</span><span class="rating">4.6</span><span class="reviews">(278)</span></div>
+        </div>
+        <div class="bio">Growth marketer who scaled B2B SaaS companies from 0 to 1M ARR. Expert in SEO, content strategy.</div>
+        <div class="tags"><span class="tag">SEO</span><span class="tag">Growth</span><span class="tag gray">+3</span></div>
+        <div class="card-foot">
+          <div class="stat"><p>Experience</p><p>7 yrs</p></div>
+          <div class="stat"><p>Rate</p><p class="rate">₹130/hr</p></div>
+          <button class="btn">View Profile</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <div class="avatar" style="background:#0891b2">VN</div>
+          <div><div class="card-name">Vikram Nair</div><div class="card-cat">🎨 Design</div></div>
+          <div class="stars"><span class="star">★</span><span class="rating">4.8</span><span class="reviews">(196)</span></div>
+        </div>
+        <div class="bio">Award-winning UX/UI designer with roots in cognitive psychology. Redesigned products for Swiggy, Razorpay.</div>
+        <div class="tags"><span class="tag">Figma</span><span class="tag">UX Research</span><span class="tag gray">+3</span></div>
+        <div class="card-foot">
+          <div class="stat"><p>Experience</p><p>9 yrs</p></div>
+          <div class="stat"><p>Rate</p><p class="rate">₹140/hr</p></div>
+          <button class="btn">View Profile</button>
+        </div>
+      </div>
+    </div>
+    <div class="pagination">
+      <div class="page-btn arrow">← Prev</div>
+      <div class="page-btn active">1</div>
+      <div class="page-btn">2</div>
+      <div class="page-btn arrow">Next →</div>
+    </div>
+  </div>
+</div>
