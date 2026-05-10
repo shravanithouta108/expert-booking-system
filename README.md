@@ -162,6 +162,28 @@ VITE_SOCKET_URL=http://localhost:5000
 ```
 
 ---
+## 📸 Screenshots
+
+### Expert Listing — Search, Filter & Paginate
+Browse verified experts by category, search by name, and paginate results.
+![Expert Listing](./outputs/expert_listing.png)
+
+### Expert Detail — Real-Time Slot Availability  
+View expert profiles and available time slots. Booked slots update instantly
+for all users via Socket.io — no refresh needed.
+![Expert Detail](./outputs/expert_details.png.png)
+
+### Booking Form — Validated Session Booking
+Complete your booking with full form validation. Pre-filled date and time
+slot are locked from the previous screen.
+![Booking Form](./outputs/booking_form.png.png)
+
+### My Bookings — Track All Sessions by Email
+Look up all past and upcoming bookings by email. Cancel pending sessions
+directly from this screen.
+![My Bookings](./outputs/my_booking.png.png)
+
+---
 
 ## 📦 Deployment
 
