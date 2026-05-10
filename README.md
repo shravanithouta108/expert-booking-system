@@ -179,4 +179,4 @@ Set the corresponding environment variables on your hosting platform.
 
 Built as part of an internship application challenge, demonstrating full-stack engineering with real-time capabilities.
 
-> "The system is designed so that even under concurrent load, no two users can ever book the same expert slot — the database is the source of truth."
+> "The system is designed so that even under concurrent load, no two users can ever book the same expert slot — the database is the source of truth.""# expert-booking-system" 
